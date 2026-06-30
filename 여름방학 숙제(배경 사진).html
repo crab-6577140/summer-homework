@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>여름방학 숙제 15가지</title>
+
+<style>
+  /* ===== 폰트 설정 ===== */
+  @font-face {
+    font-family: "BookkGothicBold";
+    src: url("./BookkGothic_Bold.ttf")
+      format("truetype");
+  }
+
+  @font-face {
+    font-family: "BookkGothicLight";
+    src: url("./BookkGothic_Light.ttf")
+      format("truetype");
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+  margin: 0;
+  padding: 100px 20px 80px;
+  color: #222;
+  font-family: "BookkGothicLight", sans-serif;
+
+  background-image: url("다운로드 (2).webp");
+  background-size: cover;
+  background-position: center;
+  
+}
+
+ .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .title-card {
+  display: inline-block;
+
+  background: rgba(255,255,255,0.9);
+  border: 1px solid #dddddd;
+
+  padding: 18px 24px;
+  margin-bottom: 50px;
+
+  cursor: ;
+  user-select: none;
+}
+
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-family: "BookkGothicBold", sans-serif;
+  }
+
+
+  .stats {
+    margin-bottom: 35px;
+    font-size: 1rem;
+  }
+
+  .progress {
+    width: 100%;
+    height: 12px;
+    background: #ffffff;
+    border-radius: 0px;
+    overflow: hidden;
+    margin-top: 12px;
+  }
+
+  .progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #fffeb9;
+   
+  }
+
+  #list {
+    display: grid;
+    grid-template-columns:
+      repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: #fff; border-radius: 0; border: 1px solid #dddddd; box-shadow: none; padding: 24px; transition: transform .15s ease;
+    cursor: pointer;
+  user-select: none;
+  }
+
+ 
+
+  .top {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+  .checkbox {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: 1px solid #999;
+  border-radius: 0;
+  background: #fff;
+
+  cursor: pointer;
+
+  transform: translateY(3px);
+}
+
+  .checkbox:checked {
+  background: #383838;
+}
+
+  .title {
+    flex: 1;
+    font-family: "BookkGothicBold", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+
+  .description {
+    margin-top: 18px;
+    color: #666;
+    line-height: 1.9;
+    white-space: pre-line;
+    font-size: .96rem;
+    padding-left: 36px;
+  }
+
+  @media (max-width: 900px) {
+    #list {
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 650px) {
+    h1 {
+      font-size: 2.3rem;
+    }
+
+    #list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+```
+
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="title-card">
+  <h1>2026년도 여름방학 숙제 목록</h1>
+</div>
+
+  <div class="stats">
+    <div id="count">0 / 15</div>
+
+    <div class="progress">
+      <div
+        class="progress-fill"
+        id="progressFill">
+      </div>
+    </div>
+  </div>
+
+  <div id="list"></div>
+
+</div>
+
+<script>
+
+  
+const data = [
+  {
+    emoji: "🏖️",
+    title: "가끔씩 아침에 혼자 해변을 산책하기",
+    description:
+`햇빛이 물에 반사되는 것을 보고 인생에서 가장 사랑하는 것들을 생각해요.`
+  },
+  {
+    emoji: "📝",
+    title: "올해 익혔던 새로운 단어들을 사용해보기",
+    description:
+`더 많은 걸 말할 수 있게 되면 더 많은 걸 생각할 수 있게 되고, 더 많은 걸 생각할 수 있게 되면 더 자유로워져요.`
+  },
+  {
+    emoji: "📚",
+    title: "최대한 책을 많이 읽기",
+    description:
+`하지만 읽어야 하기 때문에 읽지는 마세요. 여름은 모험과 꿈을 북돋우기 때문에, 책을 읽으면 날아다니는 제비 같은 기분이 들 거예요.`
+  },
+  {
+    emoji: "🌊",
+    title: "햇빛처럼 행복하고 바다처럼 길들일 수 없는 사람이 되기",
+    description: ""
+  },
+  {
+    emoji: "🌠",
+    title: "내 삶이 어떻게 될 수 있는지, 어떻게 되어야 하는지를 꿈꾸기",
+    description:
+`빛나는 햇빛 속이나 뜨거운 여름 밤에 당신의 삶이 어떻게 될 수 있는지, 어떻게 되어야 하는지 꿈꾸어봐요.`
+  },
+  
+  {
+    emoji: "📔",
+    title: "슬프거나 겁이 나더라도 걱정하지 않기",
+    description:
+`여름은 영혼을 혼란스럽게 할 수 있어요.`
+  },
+  {
+    emoji: "💌",
+    title: "나를 황홀하게 만드는 사람을 만난다면 최대한 진심으로 정중하게 말하기",
+    description:
+`상대가 이해하지 못해도 괜찮아요.`
+  },
+  {
+    emoji: "✏️",
+    title: "수업에서 필기했던 것을 다시 훑어보기",
+    description:
+`읽고 배웠던 것과 당신이 실제로 경험한 일들을 비교해봐요.`
+  },
+  {
+    emoji: "⚽",
+    title: "스포츠 활동",
+    description: ""
+  },
+  {
+    emoji: "🤝",
+    title: "욕하지 않기",
+    description:
+``
+  },
+  {
+    emoji: "💃",
+    title: "부끄러움 없이 춤을 추기",
+    description:
+`집 근처의 댄스 플로어에서, 당신의 방에서 혼자 춰도 상관 없어요. 춤을 출 수 있을 때 추지 않는 건 어리석은 행동이죠.`
+  },
+  {
+    emoji: "🌅",
+    title: "최소한 한 번은 해가 뜨는 것을 보기",
+    description:
+`눈을 감고 감사함을 느껴요.`
+  },
+  
+  
+  
+  
+  {
+    emoji: "🎬",
+    title: "가슴 아픈 대화가 나오는 영화 보기",
+    description:
+`꿈꾸는 능력을 늘리기 위해 가슴 아픈 대화가 나오는 영화를 봐요. 당신의 여름을 살고 경험하며 다시 한 번 당신의 영화를 살아보세요.`
+  },
+  {
+    emoji: "🍃",
+    title: "부정적인 느낌을 들게 하는 것들을 피하기",
+    description:
+`당신을 풍요롭게 하고, 이해하고, 있는 그대로 인정하는 사람들을 찾아보세요.`
+  },
+  {
+    emoji: "☀️",
+    title: "친절하기",
+    description: ""
+  }
+  
+];
+
+const saved =
+  JSON.parse(
+    localStorage.getItem("summer-homework")
+  ) || {};
+
+const list =
+  document.getElementById("list");
+
+function render() {
+  list.innerHTML = "";
+
+  data.forEach((item, index) => {
+    const card =
+      document.createElement("div");
+    card.className = "card";
+
+    const top =
+      document.createElement("div");
+    top.className = "top";
+
+    const checkbox =
+      document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.className = "checkbox";
+    checkbox.checked =
+      saved[index] || false;
+
+    const title =
+      document.createElement("div");
+    title.className = "title";
+    title.textContent =
+      item.title;
+
+    top.append(
+      checkbox,
+      title
+    );
+
+    card.append(top);
+
+    if (item.description !== "") {
+      const description =
+        document.createElement("div");
+
+      description.className =
+        "description";
+
+      description.textContent =
+        item.description;
+
+      card.append(description);
+    }
+
+    if (checkbox.checked) {
+      card.classList.add(
+        "completed"
+      );
+    }
+
+    const clickSound = new Audio("ocean wave.mp3");
+
+    function updateItem() {
+      saved[index] = checkbox.checked;
+      localStorage.setItem( "summer-homework", JSON.stringify(saved) );
+      card.classList.toggle( "completed", checkbox.checked );
+      clickSound.currentTime = 0;
+      clickSound.play();
+
+     updateStats(); }
+    
+    checkbox.addEventListener( "change", updateItem ); card.addEventListener( "click", (e) => { if (e.target === checkbox) { return; } checkbox.checked = !checkbox.checked; updateItem(); } );
+
+
+    list.appendChild(card);
+  });
+
+  updateStats();
+}
+
+function updateStats() {
+  const total =
+    data.length;
+
+  const completed =
+    Object.values(saved)
+      .filter(Boolean)
+      .length;
+
+  document.getElementById("count")
+    .textContent =
+    `${completed} / ${total}`;
+
+  document.getElementById(
+    "progressFill"
+  ).style.width =
+    (completed / total * 100) + "%";
+}
+
+render();
+</script>
+
+</body>
+</html>
+
