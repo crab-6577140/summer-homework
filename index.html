@@ -100,7 +100,7 @@
 
   .card {
     background: #fff; border-radius: 0; border: 1px solid #dddddd; box-shadow: none; padding: 24px;
-    cursor: pointer;
+    cursor: default;
   user-select: none;
   }
 
@@ -356,7 +356,7 @@ function render() {
 
      updateStats(); }
     
-    checkbox.addEventListener( "change", updateItem ); card.addEventListener( "click", (e) => { if (e.target === checkbox) { return; } checkbox.checked = !checkbox.checked; updateItem(); } );
+    checkbox.addEventListener( "change", updateItem );
 
 
     list.appendChild(card);
