@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="29.36875mm"
+   height="29.368752mm"
+   viewBox="0 0 29.36875 29.368752"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   sodipodi:docname="십자모양 파비콘.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.71446409"
+     inkscape:cx="149.7626"
+     inkscape:cy="188.25299"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(15.684, 15.684) scale(0.65) translate(-87.618, -107.152)">
+    <path
+       d="m 86.37459,121.83666 v -9.79785 h 2.45566 v 9.79785 z M 72.905641,105.91205 h 9.797849 v 2.45566 H 72.905641 Z M 88.83025,92.467908 v 9.773052 h -2.45566 v -9.773052 z m 13.44414,15.899802 h -9.77305 v -2.45566 h 9.77305 z"
+       id="text1"
+       style="font-size:50.8px;stroke-width:0.264583"
+       aria-label="⊹" />
+  </g>
+</svg>
