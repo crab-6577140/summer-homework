@@ -27,7 +27,7 @@
 
   body {
   margin: 0;
-  padding: 80px 20px 80px; /*===최상단 여백===*/
+  padding: 70px 20px 20px; /*===최상단 최하단 여백===*/
   color: #222;
   font-family: "BookkGothicLight", sans-serif;
 
@@ -42,19 +42,25 @@
  .container {
     max-width: 1200px;
     margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
   }
 
   .title-card {
-  display: inline-block;
+  align-self: flex-end; /* 오른쪽 끝으로 밀어내기 */
 
   background: rgba(255,255,255,0.9);
   border: 1px solid #dddddd;
 
   padding: 18px 24px;
-  margin-bottom: 70px; /*===제목과 진행도 사이 여백==*/
+  margin-bottom: 600px; /*===제목과 진행도 사이 여백==*/
 
   cursor:default;
   user-select: none;
+
+  float: right; 
+  clear: both;
 }
 
   h1 {
@@ -68,11 +74,16 @@
 
 
   .stats {
+    margin-top: 46px;
     margin-bottom: 35px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     cursor:default;
     user-select: none;
   }
+
+  #count {
+  padding-left: 10px; /* ◀ 글자만 오른쪽으로 쏙 밀어줍니다. 수치는 자유롭게 조절하세요! */
+}
 
   .progress {
     width: 100%;
@@ -80,7 +91,7 @@
     background: #ffffff;
     border-radius: 0px;
     overflow: hidden;
-    margin-top: 12px;
+    margin-top: 15px;
     border: 1px solid #dddddd;
   }
 
@@ -96,6 +107,8 @@
     grid-template-columns:
       repeat(auto-fit, minmax(320px, 1fr));
     gap: 20px;
+
+    width: 100%; /* 리스트가 넓게 채워지도록 보장 */
   }
 
   .card {
@@ -172,7 +185,11 @@
   <h1>여름, 숙제</h1>
 </div>
 
-  <div class="stats">
+
+
+  <div id="list"></div>
+
+    <div class="stats">
     <div id="count">0 / 15</div>
 
     <div class="progress">
@@ -182,9 +199,6 @@
       </div>
     </div>
   </div>
-
-  <div id="list"></div>
-
 </div>
 
 <script>
