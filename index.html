@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026년도 여름방학 숙제 목록</title>
+<title>2026</title>
 <link rel="icon" type="image/svg+xml" href="십자모양 파비콘.svg">
 
 <style>
@@ -27,13 +27,13 @@
 
   body {
   margin: 0;
-  padding: 80px 20px 80px;
+  padding: 80px 20px 80px; /*===최상단 여백===*/
   color: #222;
   font-family: "BookkGothicLight", sans-serif;
 
   background-image: url("다운로드 (2).webp");
   background-size: cover;
-  background-position: center;
+  background-position: 100% center;
 
   min-width: 370px;
   
@@ -51,7 +51,7 @@
   border: 1px solid #dddddd;
 
   padding: 18px 24px;
-  margin-bottom: 50px;
+  margin-bottom: 70px; /*===제목과 진행도 사이 여백==*/
 
   cursor:default;
   user-select: none;
@@ -59,14 +59,19 @@
 
   h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.1rem;
     font-family: "BookkGothicBold", sans-serif;
+    letter-spacing: 0.01em;   /* ① 글자 사이를 약간 넓혀서 여유롭고 담백한 느낌을 줄 때 */
+  /* letter-spacing: -0.02em;  ② 글자 사이를 미세하게 좁혀서 단정하고 꽉 찬 느낌을 줄 때 */
+  /* letter-spacing: 4px;      ③ 픽셀(px) 단위로 고정해서 넓히고 싶을 때 */
   }
 
 
   .stats {
     margin-bottom: 35px;
     font-size: 1rem;
+    cursor:default;
+    user-select: none;
   }
 
   .progress {
@@ -82,7 +87,7 @@
   .progress-fill {
     width: 0%;
     height: 100%;
-    background: #fffea6;
+    background: #fffbcd;
    
   }
 
@@ -150,14 +155,6 @@
     grid-template-columns: 1fr;
   }
 
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  .title-card {
-    padding: 12px 16px;
-    margin-bottom: 50px;
-  }
 
    body {
     background-position: 100% center;
@@ -172,7 +169,7 @@
 
 <div class="container">
 <div class="title-card">
-  <h1>2026년도 여름방학 숙제 목록</h1>
+  <h1>여름 숙제</h1>
 </div>
 
   <div class="stats">
