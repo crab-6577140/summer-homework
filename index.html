@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:image" content="https://crab-6577140.github.io/summer-homework/v904-nunny-028-d.jpg">
+<meta property="og:image" content="https://crab-6577140.github.io/summer-homework/v904-nunny-028-d.jpg?v=2">
 <title>2026</title>
 <link rel="icon" type="image/svg+xml" href="십자모양 파비콘.svg">
 
@@ -28,7 +28,7 @@
 
   body {
   margin: 0;
-  padding: 70px 20px 20px; /*===최상단 최하단 여백===*/
+  padding: 70px clamp(20px, 4vw, 80px) 20px;
   color: #222;
   font-family: "BookkGothicLight", sans-serif;
 
@@ -36,7 +36,9 @@
   background-size: cover;
   background-position: right center;
 
-  min-width: 370px;
+  min-width: 400px;
+
+  
   
 }
 
@@ -167,6 +169,14 @@
  @media (max-width: 713.6px) {
   #list {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background-image: url("v904-nunny-028-d(모바일용).jpg");
+    background-size: cover;
+    background-position: right center;
   }
 }
 
