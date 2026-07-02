@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:image" content="https://crab-6577140.github.io/summer-homework/v904-nunny-028-d.jpg">
 <title>2026</title>
 <link rel="icon" type="image/svg+xml" href="십자모양 파비콘.svg">
 
@@ -31,9 +32,9 @@
   color: #222;
   font-family: "BookkGothicLight", sans-serif;
 
-  background-image: url("다운로드 (2).png");
-  background-size: 100% 100%;
-  background-position: center;
+  background-image: url("v904-nunny-028-d.jpg");
+  background-size: cover;
+  background-position: right center;
 
   min-width: 370px;
   
@@ -166,30 +167,6 @@
  @media (max-width: 713.6px) {
   #list {
     grid-template-columns: 1fr;
-  }
-}
-
-/* ✨ [새로 수정] 창 너비가 550px 이하일 때 적용되는 스타일 */
-@media (max-width: 550px) {
-  body {
-    /* 💡 가로 너비가 550px 이하로 떨어져도, 사진의 가로 폭은 550px로 고정합니다. 
-          세로는 화면 높이에 맞게 100% 꽉 채웁니다. */
-    background-size: 550px 100%;
-    
-    /* 화면이 550px보다 작아지면 사진이 왼쪽으로 치우치지 않고 
-       가운데를 기준으로 양옆이 잘리도록 정중앙 배치합니다. */
-    background-position: center center;
-    
-    /* 스크롤 시 배경이 잘리는 현상을 막기 위해 고정합니다. */
-    background-attachment: fixed;
-  }
-}
-
-
- @media (max-width: 400px) {
-
-   body {
-    background-position: 10% center;
   }
 }
 
